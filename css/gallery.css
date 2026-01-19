@@ -1,4 +1,5 @@
-/* Gallery Specific Styles */
+/* Gallery Specific Styles - Purple Theme */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -8,16 +9,18 @@
 }
 
 .gallery-item {
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(94, 23, 64, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #5E1740;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(165, 36, 134, 0.4);
+    border-color: #A52486;
 }
 
 .gallery-item img {
@@ -26,7 +29,6 @@
     object-fit: cover;
     display: block;
     margin: 0;
-    border-radius: 0;
 }
 
 .gallery-caption {
@@ -34,9 +36,10 @@
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;
-    color: #2c3e50;
-    background-color: #f8f9fa;
+    color: #5E1740;
+    background-color: #E8E8E8;
     margin: 0;
+    font-family: Andalus, sans-serif;
 }
 
 /* Responsive Gallery */
