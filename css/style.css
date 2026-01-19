@@ -1,59 +1,262 @@
-/* Gallery Specific Styles */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 30px 0;
-    padding: 20px;
-}
+/* CSS for Week 4 - Introduction to CSS Exercise */
+/* Exact implementation matching solution PDFs */
 
-.gallery-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(94, 23, 64, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid #5E1740;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(165, 36, 134, 0.3);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    border-radius: 0;
-}
-
-.gallery-caption {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #5E1740;
+/* Base Styles */
+body {
+    font-family: Georgia, serif;
+    line-height: 150%;
     background-color: #D6DDE3;
     margin: 0;
+    padding: 0;
 }
 
-/* Responsive Gallery */
+/* Header DIV with background image */
+#header {
+    background-image: url('../Pictures/Alps.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid white;
+    margin: 0;
+}
+
+/* H1 Styling - Purple (#A52486) */
+h1 {
+    font-family: Andalus, sans-serif;
+    font-size: 34pt;
+    color: #A52486;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* H2 Styling with borders and padding - Plum (#5E1740) */
+h2 {
+    font-family: Andalus, sans-serif;
+    color: #5E1740;
+    border-left: 5px solid #5E1740;
+    border-bottom: 3px solid #5E1740;
+    padding: 10px;
+    padding-left: 20px;
+    width: 280px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background-color: #E8E8E8;
+}
+
+/* H3 Styling - underlined - Plum (#5E1740) */
+h3 {
+    font-family: Andalus, sans-serif;
+    color: #5E1740;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Navigation - centered, 60% width, Plum background */
+nav {
+    background-color: #5E1740;
+    text-align: center;
+    padding: 15px 0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Navigation links - Ice Blue (#D6DDE3), bold, no underline */
+nav a {
+    color: #D6DDE3;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #A52486;
+}
+
+/* Main content DIV */
+#main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Paragraphs - justified */
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 150%;
+}
+
+/* Data Description List - dt bold and underlined */
+dt {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #000;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Ordered List - bold items */
+ol > li {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Nested unordered lists - normal weight */
+ol > li ul {
+    margin-top: 10px;
+}
+
+ol > li ul li {
+    font-weight: normal;
+}
+
+/* Unordered list styling */
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Table Styling - exact match to solution */
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    border: 4px solid #5E1740;
+    background-color: #E8E8E8;
+}
+
+th, td {
+    border: 2px solid #5E1740;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #5E1740;
+    color: white;
+    font-weight: bold;
+    font-family: Andalus, sans-serif;
+}
+
+/* Highlighted cells - Mont Blanc and Monte Rosa */
+td.highlight {
+    font-weight: bold;
+    font-style: italic;
+    color: #A52486;
+}
+
+/* Float Left - Map */
+.floatLeft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    max-width: 400px;
+}
+
+/* Float Right - Ibex and resort images */
+.floatRight {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Figure styling */
+figure {
+    margin: 10px;
+}
+
+/* Figure caption - centered */
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #5E1740;
+    font-family: Andalus, sans-serif;
+}
+
+/* Footer DIV - centered, small text */
+#footer {
+    text-align: center;
+    font-size: small;
+    background-color: #D6DDE3;
+    padding: 20px;
+    margin-top: 40px;
+    clear: both;
+}
+
+#footer a {
+    color: #5E1740;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: #A52486;
+}
+
+/* Horizontal rule styling */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #5E1740;
+    margin: 20px 0;
+}
+
+/* Clear floats */
+.clear {
+    clear: both;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    #header {
+        height: 150px;
     }
     
-    .gallery-item img {
-        height: 200px;
+    h1 {
+        font-size: 24pt;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+    
+    nav {
+        width: 90%;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    #main {
+        padding: 20px;
+    }
+    
+    h2 {
+        width: auto;
+    }
+    
+    .floatLeft, .floatRight {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    table {
+        font-size: 0.9em;
     }
 }
